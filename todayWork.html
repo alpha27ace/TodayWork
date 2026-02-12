@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>오늘의 업무</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='todayWork.css'>
+
+
+</head>
+
+<body>
+    <div>
+        <h2>오늘업무</h2>
+    </div>
+    <div class="container">
+        <span class="select">
+            <input type='radio' id="select" name='date' value='today' onclick='getTodayDay(event)' checked="checked" />
+            <label for="select">오늘</label>
+            <input type='radio' name='date' id="select2" value='tomorrow' onclick='getTodayDay(event)' />
+            <label for="select2">내일</label>
+    </div>
+    </span>
+    <div id='result'></div>
+
+    <div id="innerworklist" class="container" disabled="true">
+        <span id="titleinnerwork">내근</span>
+        <span id="innerworkinside">
+            <span class="innerwork" id="innerwork">
+                <input class='inputtextboxcompany' type="text" placeholder="업체" id="innercompany">
+                <input class='inputtextboxwork' type="text" placeholder="업무내용" id="innerworkcontents">
+            </span>
+            <button onclick="addinnerwork()">+</button>
+        </span>
+    </div>
+
+    <div id="outworklist" class="container"><span id="titleoutwork">외근</span><span id="outworkinside"><span
+                class="innerwork" id="outwork">
+                <input type="text" class='inputtextboxoutcompany' placeholder="업체" id='outcompany'>
+                <input class='inputtextboxoutwork' type="text" placeholder="업무내용" id='outworkcontents'>
+                <select name="work_time" id="worktime" class='worktime'>
+                    <option value="9시">9시</option>
+                    <option value="10시">10시</option>
+                    <option value="11시">11시</option>
+                    <option value="12시">12시</option>
+                    <option value="1시">1시</option>
+                    <option value="2시">2시</option>
+                    <option value="3시">3시</option>
+                    <option value="4시">4시</option>
+                    <option value="5시">5시</option>
+                    <option value="6시">6시</option>
+                </select>
+                <input class='inputtextboxarea' type="text" placeholder="방문지역" id="workarea"></span>
+            <button onclick="addoutwork()">+</button></span></span>
+    </div>
+
+    <div class="container textarea-container">
+        <textarea class="todayworkmailto" id="todayworkmailto">
+    </textarea>
+        <button class="copybtn" onclick="copyToClipboard('todayworkmailto', this)">📋</button>
+    </div>
+
+    <div class="container textarea-container">
+        <textarea class="todayworkmailto" id="yearmonthdaywork">
+    </textarea>
+        <button class="copybtn" onclick="copyToClipboard('yearmonthdaywork', this)">📋</button>
+    </div>
+
+    <div class="container textarea-container">
+        <textarea class="todayworkresult" id="todayworkresultid">
+    </textarea>
+        <button class="copybtn" onclick="copyToClipboard('todayworkresultid', this)">📋</button>
+    </div>
+
+    <div class="container copy-all-container">
+        <button class="copy-all-btn" onclick="copyAllSequentially(this)">전체 복사</button>
+    </div>
+
+    <script src="todayWork.js">
+    </script>
+
+</body>
+
+</html>

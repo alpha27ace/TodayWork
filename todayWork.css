@@ -1,0 +1,241 @@
+/* 전체 배경 설정 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* 전체 컨테이너 스타일 */
+.container,
+div.inputtextboxarea {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(150, 149, 149, 0.1);
+
+}
+
+.disable {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d4d4d4;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    color: #888888
+}
+
+.notwork {
+    pointer-events: none
+}
+
+/* 섹션 제목 스타일 */
+h2 {
+    margin-top: 0;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 내근 및 외근 항목 스타일 */
+.container>div {
+    width: 95%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* 입력 필드 스타일 */
+input.inputtextboxcompany,
+input.inputtextboxoutcompany,
+input.inputtextboxarea,
+div.inputtextboxarea {
+    width: calc(15% - 20px);
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+input.inputtextboxwork,
+input.inputtextboxoutwork,
+div.inputtextboxarea {
+    width: calc(55% - 20px);
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* 추가 버튼 스타일 */
+button {
+    padding: 12px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #026000;
+}
+
+/* 텍스트 영역 스타일 */
+textarea {
+    resize: none;
+}
+
+/* 외근 항목의 select 박스 스타일 */
+#worktime {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.todayworkresult {
+    height: 200px;
+}
+
+.minuswork {
+    padding: 12px 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.minuswork:hover {
+    background-color: #680000;
+}
+
+.select {
+    padding: 15px 10px;
+}
+
+.select input[type=radio] {
+    display: none;
+}
+
+.select input[type=radio]+label {
+    display: inline-block;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    border-radius: 7px;
+    border: 0px solid #333;
+    line-height: 28px;
+    text-align: center;
+
+    font-size: 15px;
+}
+
+.select input[type=radio]+label {
+    background-color: #fff;
+    color: #9b9b9b;
+}
+
+.select input[type=radio]:checked+label {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* 텍스트 영역 컨테이너 - 가로 배치 */
+.textarea-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.textarea-container textarea {
+    flex: 1;
+}
+
+/* 복사 버튼 스타일 */
+.copybtn {
+    padding: 10px 14px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    margin-top: 8px;
+    min-width: 50px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.copybtn:hover {
+    background-color: #0b7dda;
+    transform: scale(1.05);
+}
+
+.copybtn.copied {
+    background-color: #4CAF50;
+}
+
+/* 전체 복사 버튼 컨테이너 */
+.copy-all-container {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* 전체 복사 버튼 스타일 */
+.copy-all-btn {
+    padding: 15px 40px;
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copy-all-btn:hover {
+    background-color: #F57C00;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.copy-all-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.copy-all-btn.copied {
+    background-color: #4CAF50;
+}
